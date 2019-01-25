@@ -5,4 +5,4 @@
 	path = public
 	url = https://github.com/keithzeng/keithzeng.github.io.git
 	branch = master
-	ignore = all		#ignore the check in of files
+	ignore = all		#ignore the check-in of submodule
