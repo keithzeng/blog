@@ -4,7 +4,7 @@ date: 2019-01-24T22:27:30-08:00
 categories: ["mathematic"]
 series: ["statistical learning"]
 tags: ["probability", "CSE250B", "notes"]
-draft: true
+draft: false
 ---
 # Discrete Random Variables #
 A *random variable* is a number whose value depends upon the outcome of a random experiement. Such as tossing a coin 10 times and let *X* be the number of Head.
