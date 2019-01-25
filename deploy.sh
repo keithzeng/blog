@@ -9,7 +9,7 @@ hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 git pull
 git submodule update --recursive --remote
 # Go To Public folder
-#cd public
+cd public
 # Add changes to git.
 git add --all
 
@@ -24,4 +24,4 @@ git commit -m "$msg"
 git push origin master
 
 # Come Back up to the Project Root
-#cd ..
+cd ..
