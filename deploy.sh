@@ -6,6 +6,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 git pull
+git submodule update --recursive --remote
 # Go To Public folder
 # cd public
 # Add changes to git.
