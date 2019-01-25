@@ -4,10 +4,10 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
-git add --all
 # Go To Public folder
 cd public
 # Add changes to git.
+git add --all
 
 # Commit changes.
 msg="rebuilding site `date`"
