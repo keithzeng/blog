@@ -35,15 +35,6 @@ theme = "maupassant"
     url = "/about/"
     weight = 4
 
-[[params.links]]
-  title = "Android Gradle权威指南"
-  name = "Android Gradle权威指南"
-  url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
-[[params.links]]
-  title = "常用开发工具CDN镜像"
-  name = "常用开发工具CDN镜像"
-  url = "http://mirrors.flysnow.org/"
-
 googleAnalytics = "UA-133234541-1"
 
 [params.utteranc]  #check https://utteranc.es/
