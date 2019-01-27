@@ -8,13 +8,13 @@ theme = "maupassant"
   tag = "tags"
 
 [author]
-  name = "飞雪无情"
+  name = "k317h"
 
 [params]
   author = "k317h"
-  subtitle = "A blog to record my progress"
-  keywords = "a,b,c"
-  description = "????"
+  subtitle = "A Blog to Record My Progress..."
+  keywords = "Java,Web,Software"
+  description = "Focusing on personal improvement"
 
 [menu]
   [[menu.main]]

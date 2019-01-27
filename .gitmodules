@@ -5,3 +5,6 @@
 	path = public
 	url = https://github.com/keithzeng/keithzeng.github.io.git
 	branch = master
+[submodule "themes/maupassant"]
+	path = themes/maupassant
+	url = https://github.com/keithzeng/maupassant-hugo.git
