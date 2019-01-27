@@ -15,6 +15,7 @@ theme = "maupassant"
   subtitle = "A Blog to Record My Progress..."
   keywords = "Java,Web,Software"
   description = "Focusing on personal improvement"
+  busuanzi = true
 
 [menu]
   [[menu.main]]
