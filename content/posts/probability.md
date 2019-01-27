@@ -17,8 +17,6 @@ Probability mass functions has following properties:
 1. For any interval $P(X \in B) = \sum_{x_i \in B}p(x_i)$
 1. $\sum_{i}p(x_i) = 1$
 
----
-
 There are many types of discrete random variable
 
 1. Unifrom discrete random variable
