@@ -7,10 +7,11 @@ tags: ["CSE202", "HW"]
 draft: true
 ---
 [HW Link](https://cseweb.ucsd.edu/classes/wi19/cse202-a/hw1.pdf)
+
 ## Problem 1 (KT 4.2a)##
 YES. T is still the MST for new instance.
 
-Proof by contraction:
+Proof by contraction
 
 - Assume original MST is T and new MST is T'
 - $T \neq T'$, at least one edge is different
@@ -24,33 +25,36 @@ No. The P is no longer the shortest path for new instance.
 As we can see, in the Dijkastra's algorithm, the edge e(s,t) is the shortest path with cost = 7. After squaring the cost, the shortest path P' = s -> a -> t instead, with cost of 32. So $P' \neq P$.
 
 ## Problem 3 (KT 17)##
-**Algorithm:**\
-Let $I = \\{I_1, I_2, ..., I_n\\}$ and best = 0
 
+### Algorithm: ###
+
+1. Let $I = \\{I_1, I_2, ..., I_n\\}$ and best = 0
 1. Sort I based on the finish time, f(i)
-2. for i in n
+1. for i in n
   - let $R = I \setminus \\{I_j | i \neq j$ and $I_i \cap I_j \neq \emptyset\\}$
   - let num_of_jobs = perfome regular interval scheduling algorithm on R
   - best = max(best, num_of_jobs + 1)
 
-**Time complexity anaylysis:**\
-Step 1, sorting takes $O(nlogn)$\
-Step 2, the for loops takes $O(n^2)$ overall, since looping through intervals takes O(n), pruning + regular interval scheduling algorithm takes O(n)
+### Time complexity anaylysis:###
+
+Step 2, sorting takes $O(nlogn)$.\
+Step 3, the for loops takes $O(n^2)$ overall, since looping through intervals takes O(n), pruning + regular interval scheduling algorithm takes O(n)
 So time complexity = $O(nlogn + n^2)$ = $O(n^2)$.
 
-**Space complexity analysis:**\
+### Space complexity analysis: ###
+
 We don't need any extra space since we sorted in place.\
 So space complexity = O(1).
 
-**Proof of Optimality**\
-Claim:\
+### Proof of Optimality: ###
+**Claim:**\
 The algorithm above provides the optimal solution.\
 
-Proof:\
+**Proof:**\
 Let's say the optimal solution is S\*, which contains a $I_i$. Since above algorithm is brute force algorithm go through each job, we are guranteed that when are checing the optimal number for $I_i$ the number is updated.
 
-## Problem 4##
-**Algorithm:**
+## Problem 4 ##
+### Algorithm: ###
 
 Let $J = \\{J_1, J_2, ..., J_n\\}$, where $J_i$ contains $c_i$ and $p_i$\
 then sort J based on $c_i$\
@@ -73,26 +77,28 @@ while k > 0 and H is not empty
 1. execute loop add_job
 1. $k \gets k - 1$
 
+### Proof of Optimality: ###
 **Claim:**\
 The gready algorithm above produces the optimal capital, C\*.\
 
 **Proof:**\
 Let's say in particular loop, when we have capital C, we chooses a different $J_y$ instead of $J_x$. Since $J_x$ is obtained from the top of the heap, it implies that $p_y \leq p_x$, also the new capital $C + p_y \leq C + p_x$. Subsequently, in third step, when we consider add the jobs whose cost are smaller than the current capital, the new heap $H' \in H$, which indicates that our algorithm stays ahead in every step afterward.
 
-**Time Complexity:**
+#### Time Complexity: ####
 
 1. Sorting takes O(nlogn).
 1. Extractmax takes retrievl + deletion = O(1) + O(logn) = O(logn). For k loops, complexity = O(klogn).
 1. The loop add_job execute exactly n times, $\sum_i^n log(n!) = O(nlogn)$.
 1. So overall = O(nlogn + klogn) = O(nlogn), since $k \leq n$
 
-**Space Complexity**
+### Space Complexity: ###
 
 O(n) for storing all the projects in the heap.
 
-## Problem 5##
+## Problem 5 ##
 
-**Algorithm**\
+### Algorithm: ###
+
 sort $T = \\{t_1, t_2, ..., t_n\\}$ in decreasing order\
 sort $W = \\{w_1, w_2, ..., w_n\\}$ in decreasing order\
 
@@ -109,6 +115,7 @@ while $i \leq n$
 2. else
   - $i \gets i + 1$
 
+### Proof of Optimality: ###
 **Claim:**\
 The above algorithm produces the optimal assignment, R.
 
