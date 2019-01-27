@@ -6,5 +6,5 @@ series: ["other"]
 tags: ["other"]
 title: "Archives"
 draft: false
-type: "archives"
+type: archives
 ---
