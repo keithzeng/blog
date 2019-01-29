@@ -9,8 +9,7 @@ draft: true
 [HW Link](https://cseweb.ucsd.edu/classes/wi19/cse202-a/hw1.pdf)
 
 ## Problem 1 (KT 4.2a)##
-YES. T is still the MST for new instance.
-
+YES. T is still the MST for new instance.\
 Proof by contraction
 
 - Assume original MST is T and new MST is T'
@@ -22,7 +21,7 @@ Proof by contraction
 No. The P is no longer the shortest path for new instance.
 
 ![Diargram](/img/cse202/hw1.2.png)
-As we can see, in the Dijkastra's algorithm, the edge e(s,t) is the shortest path with cost = 7. After squaring the cost, the shortest path P' = s -> a -> t instead, with cost of 32. So $P' \neq P$.
+As we can see, in the Dijkastra's algorithm, the edge e(s,t) is the shortest path with cost = 7. After squaring the cost, there is a shortest path P' = s -> a -> t with cost of 32 < cost(P) = 49.
 
 ## Problem 3 (KT 17)##
 
@@ -43,8 +42,7 @@ So time complexity = $O(nlogn + n^2)$ = $O(n^2)$.
 
 ### Space complexity analysis: ###
 
-We don't need any extra space since we sorted in place.\
-So space complexity = O(1).
+We don't use any extra space, so space complexity = O(1).
 
 ### Proof of Optimality: ###
 **Claim:**\
@@ -57,24 +55,12 @@ Let's say the optimal solution is S\*, which contains a $I_i$. Since above algor
 ### Algorithm: ###
 
 Let $J = \\{J_1, J_2, ..., J_n\\}$, where $J_i$ contains $c_i$ and $p_i$\
-then sort J based on $c_i$\
-Let H = maxheap sorted on J's profit\
 Let $C = C_0$\
-Let z = 0
+while k > 0
 
-loop add_job:\
-while $z \leq n$ and $c_z \leq C$
-
-1. push $J_z$ to H
-1. $J \setminus \\{J_z\\}$
-1. $z \gets z + 1$
-
-
-while k > 0 and H is not empty
-
-1. $J_x$ = extractMax from H
+1. find project x, which $c_x <= C$ and $p_x$ is max
+1. if $x = \emptyset$ break
 1. $C \gets C + p_x$
-1. execute loop add_job
 1. $k \gets k - 1$
 
 ### Proof of Optimality: ###
@@ -82,13 +68,40 @@ while k > 0 and H is not empty
 The gready algorithm above produces the optimal capital, C\*.\
 
 **Proof:**\
-Let's say in particular loop, when we have capital C, we chooses a different $J_y$ instead of $J_x$. Since $J_x$ is obtained from the top of the heap, it implies that $p_y \leq p_x$, also the new capital $C + p_y \leq C + p_x$. Subsequently, in third step, when we consider add the jobs whose cost are smaller than the current capital, the new heap $H' \in H$, which indicates that our algorithm stays ahead in every step afterward.
+Let's say in loop i, we have capital C, we choose a different $J_y$. Since our algorithm picks $J_x$, it implies that $p_y \leq p_x$ and also new capital $C' \leq C$. In the next round, when we consider all the jobs whose cost are smaller than the current capital, the new heap $H' \subseteq H$, which shows that our algorithm stays ahead in every step.
 
 #### Time Complexity: ####
+T = O(kn), if k = n we have $T = O(n^2)$.
 
+### Space Complexity: ###
+
+No extra space, so space complexity = O(1).
+
+### Improved Algorithm: ###
+
+Let $J = \\{J_1, J_2, ..., J_n\\}$, where $J_i$ contains $c_i$ and $p_i$, then sort J based on $c_i$\
+Let H = maxheap sorted on J's profit\
+Let $C = C_0$\
+Let z = 1, pointer for J
+
+loop add_job:\
+while $z \leq n$ and $c_z \leq C$
+
+1. push $J_z$ to H
+1. $z \gets z + 1$
+
+excute loop add_job\
+while k > 0 and H is not empty
+
+1. $J_x$ = extractMax from H
+1. $C \gets C + p_x$
+1. execute loop add_job
+1. $k \gets k - 1$
+
+### Time Complexity: ###
 1. Sorting takes O(nlogn).
-1. Extractmax takes retrievl + deletion = O(1) + O(logn) = O(logn). For k loops, complexity = O(klogn).
-1. The loop add_job execute exactly n times, $\sum_i^n log(n!) = O(nlogn)$.
+1. Extractmax takes retrieval + deletion = O(1) + O(logn) = O(logn). For k loops, complexity = O(klogn).
+1. The add_job inserts n jobs, each insertion takes O(logi) where i = size of heap. So $\sum_i^n log(i) = O(nlogn)$.
 1. So overall = O(nlogn + klogn) = O(nlogn), since $k \leq n$
 
 ### Space Complexity: ###
@@ -126,7 +139,7 @@ This can happen by either case:
 1. R' = R + {i, j} 
 1. R' have different arrangement of pairs that vacant a machine to take on another task, resulting more tasks to be taken
 
-For case 1, let's say in step i, our algorithm rejects the task because $t_i$ / $w_j$ $\leq D$, but R' takes this pair {i, j}. This will be a violation to the statement and moreover this machine can't complete the task on time.
+For case 1, let's say in step i, our algorithm rejects the task because $t_i$ / $w_j$ $\gt D$, but R' takes this pair {i, j}. This will be a violation to the requirement since this machine can't complete the task on time.
 
-For case 2, the only way that R' and R will take on different arrangement is when R decides to take the pair {i, j} but R' decides to ignore the $t_i$. This have vacated the $w_j$, we now have |R| > |R'|. In the next round, $w_j$ can take the $t_i$$\tiny{+}$$_1$. In the meantime R could either take new pair {i+1, j+1} or rejects it dues to insufficient time, therefore |R| $\geq$ |R'| in every step.
+For case 2, the only way that R' and R will take on different arrangement is when R decides to take the pair {i, j} but R' decides to ignore the $t_i$. This have vacated the $w_j$, we now have |R| > |R'|. In the next round, $w_j$ can try to take the $t_i$$\tiny{+}$$_1$, making $|R'| \gets |R'| + 1$ or 0. In the meantime, R could either take the new pair {i+1, j+1} or rejects. In the best case scenario, $|R'| \gets |R'| + 1$, while |R| stays, making |R'| = |R| in this round. However, in every round, |R| $\geq$ |R'|.
 
