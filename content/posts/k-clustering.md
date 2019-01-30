@@ -3,11 +3,11 @@ title: "K Clustering"
 date: 2019-01-25T21:51:25-08:00
 categories: ["algorithm"]
 series: ["greedy"]
-tags: ["CSE202", "notes"]
+tags: ["cse202", "notes"]
 draft: false
 ---
 
-## Problem ##
+## Problem
 We have set of objects $U = \\{o_1, o_2, ...\\}$, and we want to split them into k clusters.
 
 We also have following definition for distance function.
@@ -21,7 +21,7 @@ At the end, we should have $C = \\{C_1, C_2, ... C_K\\}$.
 Let's define *spacing* to be the minimum dist between clusters.
 Our goal is to find the k-clustering with maximum spacing.
 
-## Algorithm ##
+## Algorithm
 Kruskal's Algorithm
 
 - Sort the edges using dist as edge weight
@@ -34,7 +34,7 @@ Kruskal's Algorithm
 Below is picture of single-linked clusters with k = 3.
 ![k = 3](/img/cse202/k-clustering-1.png)
 
-## Analyzing Algorithm ##
+## Analyzing Algorithm
 Claim:
 The components $C_1, C_2, ..., C_k$ formed by deleting the k − 1 most expensive edges of the minimum spanning tree T constitute a k-clustering of maximum spacing.
 

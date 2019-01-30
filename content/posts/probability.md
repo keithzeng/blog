@@ -6,7 +6,7 @@ series: ["statistical learning"]
 tags: ["probability", "CSE250B", "notes"]
 draft: false
 ---
-# Discrete Random Variables #
+# Discrete Random Variables
 A *random variable* is a number whose value depends upon the outcome of a random experiement. Such as tossing a coin 10 times and let *X* be the number of Head.
 
 A *discrete random variable* **X** has finitely countable values $x_i = 1, 2...$ and $p(x_i) = P(X = x_i)$ is called *probability mass function*.
@@ -33,7 +33,7 @@ There are many types of discrete random variable
   - $P(X = n) = p(1 - p)^{n - 1}, where n = 1, 2, ...$
   - $\mathbb{E} = \frac{1}{p}$
 
-# Coninuous Random Variables #
+# Coninuous Random Variables
 A random variable X is continuous if there exists a nonnegative function f so that, for every interval B,
 $$
 P(X \in B) = \int_{B}f(x)dx

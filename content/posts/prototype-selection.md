@@ -7,7 +7,7 @@ tags: ["knn"]
 draft: false
 ---
 
-# Backgrond #
+# Backgrond
 [kNN prototype selection](https://ieeexplore.ieee.org/document/6136515)
 [Summary](https://sci2s.ugr.es/pr)
 [List](https://sci2s.ugr.es/pr/pstax/techReport)
@@ -32,11 +32,11 @@ Prototype Selection
 1. hybrid method
   - achive elimination of noise and superfluous at the same time
 
-# Methods #
+# Methods
 
-## Edition Method ##
+## Edition Method
 
-## Condensation Method ##
+## Condensation Method
 1. CNN
   - $S = {t_1, t2, ..., t_c}$
   - $T = Training Set \setminus S$
