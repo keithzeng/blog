@@ -51,17 +51,25 @@ where
 - p = proportion mean of sample
 - n = sample size.
 
-The plot for random selection for different M.
-![Accuracy vs Prototye](/img/cse250/random_accuracy.png)
+The following plots are for random selection and k-means:
+![Random's Accuracy vs Prototye](/img/cse250/random_accuracy.png)
+![K-mean's Accuracy vs Prototye](/img/cse250/kmean_accuracy.png)
+![Accuracy vs Prototye](/img/cse250/accuracy.png)
 
-[Accuracy Random vs PS](https://www.tablesgenerator.com/markdown_tables)
+[Accuracy for Random vs K-Means PS](https://www.tablesgenerator.com/markdown_tables)
 
-| Num of Prototype |  Accuracy of Random | Accuracy of PS |
-|-----------------:|--------------------:|---------------:|
-|             1000 | 0.8841 $\pm$ 0.2008 |         0.9578 |
-|             5000 | 0.9354 $\pm$ 0.1184 |         0.9697 |
-|            10000 | 0.9484 $\pm$ 0.0959 |         0.9675 |
-
+| Num of Prototype |  Accuracy of Random | Accuracy of K-Means |
+|-----------------:|--------------------:|--------------------:|
+|             1000 | 0.8861 $\pm$ 0.1137 | 0.9580 $\pm$ 0.0718 |
+|             2000 | 0.9123 $\pm$ 0.1012 | 0.9628 $\pm$ 0.0678 |
+|             3000 | 0.9230 $\pm$ 0.0954 | 0.9650 $\pm$ 0.0657 |
+|             4000 | 0.9309 $\pm$ 0.0908 | 0.9662 $\pm$ 0.0646 |
+|             5000 | 0.9355 $\pm$ 0.0879 | 0.9673 $\pm$ 0.0637 |
+|             6000 | 0.9393 $\pm$ 0.0854 | 0.9679 $\pm$ 0.0631 |
+|             7000 | 0.9420 $\pm$ 0.0836 | 0.9685 $\pm$ 0.0625 |
+|             8000 | 0.9449 $\pm$ 0.0817 | 0.9685 $\pm$ 0.0625 |
+|             9000 | 0.9464 $\pm$ 0.0806 | 0.9689 $\pm$ 0.0621 |
+|            10000 | 0.9489 $\pm$ 0.0788 | 0.9691 $\pm$ 0.0619 |
 
 
 ## 4. Critical Evaluation

@@ -81,4 +81,26 @@ D(\omega\_{j,2n}) &= \sum\_{t=0}^{2n - 1} c_t(\sum\_{s=0}^{2n - 1} e^{(2\pi i)(s
 &= \sum\_{t=0}^{2n - 1} c_t(\sum\_{s=0}^{2n - 1} \omega\_{t+j,2n}^s)
 \end{align}
 
+## In class
+Finite Field $\mathbb{Z}_p$, where p is a prime
+$(\mathbb{Z}_p, +, 0)$, $(\mathbb{Z}_p^*, *, 1)$
+
+$\mathbb{Z}_p^* = \\{1, ..., p-1\\} = \\{g^i$ and $p | i = 0, ..., p-2\\}$
+
+$\forall$ prime p $\exists g$
+
+$\mathbb{Z}_{257}^* = \\{2^i | i = 0, ...255\\}$
+
+$|\mathbb{Z}_{257}^*| = 256 = 2^8$
+
+$o(g) = min\\{i>0| g^i$ and $ p\\}\bigg||\mathbb{Z}_p^*| = 256$
+
+
+
+
+
+
+
+
+
 
