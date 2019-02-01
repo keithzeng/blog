@@ -3,7 +3,7 @@ title: "Nearest Neighbor Classification"
 date: 2019-01-31T16:08:27-08:00
 categories: ["machine learning"]
 series: ["statistical learning"]
-tags: ["mnist", "distance", "metric"]
+tags: ["mnist", "distance", "metric", "notes"]
 draft: false
 ---
 

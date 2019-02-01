@@ -3,7 +3,7 @@ title: "lp norm"
 date: 2019-01-31T17:02:35-08:00
 categories: ["machine learning"]
 series: ["statistical learning"]
-tags: ["lpnorm"]
+tags: ["lpnorm", "notes"]
 draft: false
 ---
 
