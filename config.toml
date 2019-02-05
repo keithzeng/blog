@@ -2,6 +2,8 @@ baseURL = "https://keithzeng.github.io"
 languageCode = "en-us"
 title = "k317h"
 theme = "maupassant"
+googleAnalytics = "UA-133234541-1"
+
 [taxonomies]
   category = "categories"
   series = "series"
@@ -35,8 +37,6 @@ theme = "maupassant"
     name = "About"
     url = "/about/"
     weight = 4
-
-googleAnalytics = "UA-133234541-1"
 
 [params.utteranc]  #check https://utteranc.es/
     enable = true

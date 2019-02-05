@@ -1,6 +1,6 @@
 ---
 title: "Logistic Regression"
-date: 2019-02-01T00:39:49-08:00
+date: 2019-02-01T14:39:49-08:00
 categories: ["machine learning"]
 series: ["statistical learning"]
 tags: ["logistic"]
@@ -55,4 +55,22 @@ $$\prod_{i=1}^n Pr\_{w,b}(y^{(i)}|x^{(i)})$$
 After taking log of maximum-likelihood formula, we convert it to the loss function
 
 $$L(w, b) = - \sum\_{i=1}^n \ln Pr\_{w,b}(y^{(i)}|x^{(i)}) = \sum_{i=1}^n \ln (1 + e^{-y^{(i)}(w \cdot x^{(i)} + b)})$$
+
+## Solution
+
+There is no closed-form solution for w, but L(x) is convex.
+
+Convexity is crucial because the local minimum is also the global minimum.
+
+![convexity](/img/cse250/convexity.png)
+
+We turn to numerical method gradient descent.
+
+## Gradient Descent
+
+1. Set $w_0 = 0$
+1. For t = 0, 1, 2, ... until convergence:
+  - $w_{t+1} = w_t + \eta_t \sum\_{i=1}^n y^{(i)}x^{(i)}Pr\_{w_t}(-y^{(i)} | x^{(i)})$, where $\eta_t$ is called step size (learning rate)
+
+
 
