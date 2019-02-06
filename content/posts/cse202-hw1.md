@@ -3,7 +3,7 @@ title: "CSE202 HW1"
 date: 2019-01-26T13:30:38-08:00
 categories: ["algorithm"]
 series: ["greedy"]
-tags: ["cse202", "HW"]
+tags: ["cse202", "hw"]
 draft: true
 ---
 [HW Link](https://cseweb.ucsd.edu/classes/wi19/cse202-a/hw1.pdf)

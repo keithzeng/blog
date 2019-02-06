@@ -3,7 +3,7 @@ title: "CSE250 Proj1"
 date: 2019-01-27T16:22:07-08:00
 categories: ["machine learning"]
 series: ["statistical learning"]
-tags: ["CSE250B", "project", "mnist"]
+tags: ["cse250b", "project", "mnist"]
 draft: true
 ---
 

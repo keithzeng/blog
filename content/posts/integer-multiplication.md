@@ -10,6 +10,8 @@ draft: false
 ## Problem
 ![integer multiplication](/img/cse202/integer-multiplication.png)
 
+[Wiki Explanation](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
+
 ## Algorithm
 
 Let's say we define $x = x_1 2^{n/2} + x_0$, then xy become
