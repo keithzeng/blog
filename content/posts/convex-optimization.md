@@ -1,6 +1,6 @@
 ---
 title: "Convex Optimization"
-date: 2019-02-06T00:35:35-08:00
+date: 2019-02-07T22:15:35-08:00
 categories: ["machine learning"]
 series: ["statistical learning"]
 tags: ["convexity"]
@@ -50,7 +50,7 @@ Necessary condition: $f'(w^\*) = 0, \nabla(w^\*)$ is positive semi definite
 
 Sufficient condition: $f'(w^\*) = 0,  \nabla^2(w^\*)$ is positive definite
 
-### Positive Semi Definite (PSD)
+### Positive Semi Definite ([PSD](../positive-semi-definite))
 
 A dxd matrix A is positive semi definite if for all dx1 vector z, $z^TAz \geq 0$
 
