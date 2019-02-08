@@ -83,7 +83,7 @@ Examples:
 
 1. linear regression
   - $f(w) = ||y-Xw||^2 = (y - Xw)^T(y - Xw)$
-  - $\nabla f(w) = -2yX + 2X^TXw$
+  - $\nabla f(w) = -2X^Ty + 2X^TXw$
   - $\nabla^2 f(w) = X^TX$, which is PSD
 1. logistic regression
   - $f(w) = \sum_{i=1}^n \ln (1 + e^{-y^{(i)}(w^T \cdot x^{(i)})})$
