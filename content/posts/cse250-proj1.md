@@ -4,7 +4,7 @@ date: 2019-01-27T16:22:07-08:00
 categories: ["machine learning"]
 series: ["statistical learning"]
 tags: ["cse250b", "project", "mnist"]
-draft: true
+draft: false
 ---
 
 [Project 1](http://cseweb.ucsd.edu/classes/wi19/cse250B-a/prog1.pdf)

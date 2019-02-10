@@ -43,12 +43,13 @@ Instead of looping once for original inversion problem, we here loop twice. One 
 
 T(n) = O(n)
 
+\pagebreak
 
 ## Problem 2
 
 ### part (a)
 
-Since there are 4 addition, 2 substractions. Assume other operations takes negligible time.
+Since there are 4 addition, 2 substractions. Assume all other operations takes negligible time and all the $B^n$ is precomputed to save time.
 
 We have following
 
@@ -63,7 +64,58 @@ $$T(n) = 4 \cdot 3 ^ {\log n} - 3 = 4 n ^ {\log 3} - 3$$
 
 ### part (b)
 
+ALG(A, B, n):
+
+1. pad A and B to 2n digits
+1. A = pad(A, 2n)
+1. B = pad(B, 2n)
+1. A = DFT(A, 2n)
+1. B = DFT(B)
+1. C = $A \cdot B$
+1. coefficient = IDFT\(C)
+1. return Coefficient
+
+pad(A, d):
+
+1. pad the input A to desired digits
+
+
+DFT(x, N, s)[^fft] :
+
+1. if N = 1
+  - return X
+2. else
+  - $X_0, ... X\_{N/2 - 1} \gets$ DFT(x,N/2, 2s)
+  - $X\_{N/2}, ... X\_{N -1} \gets$ DFT(x + s,N/2, 2s)
+  - Full DFT Step:
+    - for k = 0 to N / 2 - 1
+       - $t \gets X_K$
+       - $X_k \gets t + e^{\frac{2\pi i k}{N}} X\_{k+N/2}$
+       - $X\_{k + N / 2} \gets t - e^{\frac{2\pi i k}{N}} X\_{k+N/2}$
+    - endFor
+1. endIf
+
+Assume that all the roots of unity is precomuted to save time. Now for DFT, the recurrent relation is $T(N) = 2T(N/2) + 2N$, which is $T(N) = 2N \log_2 N$, IDFT performs excatly the same steps in reverse, so we can treat the time complexity as same.
+
+Since there are 3 DFT operations, and N dot operations, we have overall time complexity of
+
+\begin{align}
+T(N) &= 3 \times 2N \log_2 N + N \newline
+T(n) &= 3 \times 2 (2n) \log_2 {2n} + 2n \newline
+&= 12 n \log_2 {2n} + 2n \newline
+&= 12 n (\log_2 2 + \log_2 n) + 2n \newline
+&= 14 n + 12n\log_2 n\newline
+\end{align}
+
+Finally incoporating the 10 times cost to float points operations, we got
+
+$$T(n) = 140 n + 120 n\log_2 n$$
+
 ### part \(c)
+
+![cost vs input](/img/cse202/hw2.2c.png)
+
+Using scipy library, I got n = 40254.58180453, So if n >= 40255, FFT outperforms Karatsuba.
 
 ## Problem 3
 
@@ -100,7 +152,7 @@ Where
 - m = number of edges
 - n = number of vertices
 
-### Algorithm 2 (Improve of Algorithm):
+### Algorithm 2 (Improved Algorithm):
 
 Idea: we have done a lot of repeated work to find the disitance between different iterations. We can see that the maximum diameter should be either on subtrees of current vertex or span across different subtree (including current vertex). We can recursively split the problem into k subgroups and perform the calculation.
 
@@ -157,9 +209,7 @@ If this is not the case, we can always extend the path with additional nodes to 
 
 ## Problem 4
 
-Idea:
-
-For each book we can either start a new shelf by itself and append to the exisiting shelf. SO we define a dp array BEST, where BEST[i] stores the best height for stacking the the books from i to n. Thus, we start from the last book $b_n$ to $b_1$.
+Idea: for each book we can either start a new shelf by itself and append to the exisiting shelf. SO we define a dp array BEST, where BEST[i] stores the best height for stacking the the books from i to n. Thus, we start from the last book $b_n$ to $b_1$.
 
 Assuming each book's width is smaller than W, otherwise there is no solution at all.
 
@@ -192,3 +242,4 @@ T(n) = O($n^2$), double for loops and each loops takes around n times.
 
 T(n) = O(n), only auxiliary array of size n is used.
 
+[^fft]: FFT, https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm
