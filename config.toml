@@ -21,9 +21,9 @@ googleAnalytics = "UA-133234541-1"
 
 [menu]
   [[menu.main]]
-    identifier = "books"
-    name = "Books"
-    url = "/books/"
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
     weight = 2
 
   [[menu.main]]
