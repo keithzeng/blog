@@ -4,7 +4,7 @@ date: 2019-02-12T11:19:46-08:00
 categories: ["software engineering"]
 series: ["full stack"]
 tags: ["front-end", "back-end"]
-draft: true
+draft: false
 ---
 
 [Full Stack Developer](https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c)
