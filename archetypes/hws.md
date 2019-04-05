@@ -2,8 +2,8 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 categories: ["algorithm"]
-series: ["dynamic programing"]
-tags: ["dp"]
+series: ["np"]
+tags: ["hw", "cse202"]
 draft: false
 ---
 
@@ -16,7 +16,5 @@ draft: false
 ### Correctness
 
 ### Complexity
-
-### Data Structure
 
 [^algo]: Algorithm Design by Jon Kleinber, Eva Tardos 

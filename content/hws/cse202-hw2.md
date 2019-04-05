@@ -4,7 +4,7 @@ date: 2019-02-05T13:01:30-08:00
 categories: ["algorithm"]
 series: ["divide and conquer"]
 tags: ["cse202", "hw"]
-draft: true
+draft: false
 ---
 [HW Link](https://cseweb.ucsd.edu/classes/wi19/cse202-a/hw2.pdf)
 

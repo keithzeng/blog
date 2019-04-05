@@ -17,7 +17,7 @@ googleAnalytics = "UA-133234541-1"
   subtitle = "A Blog to Record My Progress..."
   keywords = "Java,Web,Software"
   description = "Focusing on personal improvement"
-  busuanzi = true
+  busuanzi = false
 
 [menu]
   [[menu.main]]
