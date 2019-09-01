@@ -7,4 +7,5 @@ tags: ["other"]
 draft: false
 ---
 
-[Resume](/resume/Zeng,Keith-resume-ML.pdf)
+[ML Resume](/resume/Zeng,Keith-resume-ML.pdf)\
+[SE Resume](/resume/Zeng,Keith-resume-SE.pdf)
